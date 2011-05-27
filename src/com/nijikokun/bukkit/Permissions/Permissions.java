@@ -40,9 +40,8 @@ public class Permissions extends JavaPlugin {
 	}
 
 	public boolean permission(Player player, String permission) {
-		if(this.j2.debug){
-			this.j2.log.info("FakePerm: Does "+player.getName()+" have "+permission+"?");
-		}
+		this.j2.debug("FakePerm: Does "+player.getName()+" have "+permission+"?");
+		
 		if(this.nope){
 			return false;
 		}
@@ -50,9 +49,8 @@ public class Permissions extends JavaPlugin {
 	}
 	
 	public boolean inGroup(String name,String group){
-		if(this.j2.debug){
-			this.j2.log.info("FakePerm: Is "+name+" in "+group+"?");
-		}
+		this.j2.debug("FakePerm: Is "+name+" in "+group+"?");
+		
 		if(this.nope){
 			return false;
 		}
